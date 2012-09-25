@@ -46,7 +46,7 @@ class Vector3 {
     return new Vector3(x/len, y/len, z/len);
   }
 
-  Vector3 operator negate() {
+  Vector3 operator -() {
     return new Vector3(-x, -y, -z);
   }
 
@@ -146,7 +146,7 @@ class Matrix4 {
         String display;
         try {
           display = v.toStringAsPrecision(4);
-        } catch (Object e) {
+        } catch (e) {
           // TODO - remove this once toStringAsPrecision is implemented in vm
           display = v.toString();
         }
@@ -315,7 +315,7 @@ class Matrix4 {
     m.m11 = zNear / yTop;
     m.m22 = -(zFar + zNear) / zDepth;
     m.m23 = -(2 * zNear * zFar) / zDepth;
-    m.m32 = -1;
+    m.m32 = -1.0;
     return m;
   }
 
