@@ -7,5 +7,6 @@
  * (This gets Float32Array from float32.dart, rather than #import'ing dart:dom.)
  */
 #library("matrix");
+#import("dart:math", prefix:"Math");
 #source("matrix4.dart");
 #source("float32.dart");
